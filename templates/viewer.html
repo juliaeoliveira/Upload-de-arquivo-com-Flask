@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Visualizar Imagem</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h2>Visualizador</h2>
+    <button onclick="openPopup()">Abrir imagem</button>
+</div>
+
+<!-- Popup -->
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close" onclick="closePopup()">×</span>
+
+        {% if image %}
+            <img src="{{ url_for('uploaded_file', filename=image) }}" alt="Imagem enviada">
+        {% else %}
+            <p>Nenhuma imagem encontrada.</p>
+        {% endif %}
+    </div>
+</div>
+
+<script src="{{ url_for('static', filename='js/popup.js') }}"></script>
+
+</body>
+</html>

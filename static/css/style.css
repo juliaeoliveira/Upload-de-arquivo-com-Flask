@@ -1,0 +1,49 @@
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+.container {
+    width: 300px;
+    margin: 100px auto;
+    text-align: center;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+button {
+    margin-top: 15px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Popup */
+.popup {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.6);
+}
+
+.popup-content {
+    background: white;
+    width: 700px;
+    margin: 100px auto;
+    padding: 20px;
+    border-radius: 8px;
+    position: relative;
+    text-align: center;
+}
+
+.popup-content img {
+    max-width: 100%;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 12px;
+    font-size: 20px;
+    cursor: pointer;
+}
